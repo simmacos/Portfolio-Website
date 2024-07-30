@@ -77,6 +77,23 @@ li {
     animation: progress 2s ease-in-out infinite;
 }
 
+
+
+
+.email-address {
+    color: #61afef;
+    user-select: all;
+    display: inline-block; /* Aggiunto */
+}
+
+.email-redirect {
+    margin-left: 5px; /* Ridotto il margine */
+    color: #98c379;
+    text-decoration: none;
+    user-select: none;
+    display: inline-block; /* Aggiunto */
+}
+
 @keyframes progress {
     0% {
         width: 0;
