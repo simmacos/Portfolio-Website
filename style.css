@@ -5,21 +5,20 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: auto;
+    overflow-y: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 800px;
+    width: 800px;
     padding: 40px;
     background-color: #21252b;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    max-height: 100%;
 }
 
 h1 {
@@ -77,21 +76,18 @@ li {
     animation: progress 2s ease-in-out infinite;
 }
 
-
-
-
 .email-address {
     color: #61afef;
     user-select: all;
-    display: inline-block; /* Aggiunto */
+    display: inline-block;
 }
 
 .email-redirect {
-    margin-left: 5px; /* Ridotto il margine */
+    margin-left: 5px;
     color: #98c379;
     text-decoration: none;
     user-select: none;
-    display: inline-block; /* Aggiunto */
+    display: inline-block;
 }
 
 @keyframes progress {
