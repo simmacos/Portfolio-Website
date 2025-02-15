@@ -102,12 +102,17 @@ li {
     }
 }
 
-/* Card Container for Compact Layout */
+/* Card Container */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* Default 2 cards per row */
+    gap: 20px; /* Space between cards */
     margin-top: 20px;
+}
+
+/* Single Card Fills Entire Row */
+.card-container > .card:nth-child(odd):last-child {
+    grid-column: span 2; /* Make the last single card occupy the whole row */
 }
 
 /* Individual Card */
@@ -117,7 +122,6 @@ li {
     border-radius: 6px;
     padding: 10px 15px;
     text-align: left;
-    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 /* Project Title */
@@ -132,7 +136,6 @@ li {
     font-size: 14px;
     color: #abb2bf;
     margin-bottom: 10px;
-    line-height: 1.4;
 }
 
 /* Tech Stack */
@@ -168,4 +171,11 @@ section h2 {
     margin-top: 40px;
     font-size: 24px;
     color: #d19a66;
+}
+
+/* Responsive Behavior */
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: 1fr; /* Stack all cards vertically on small screens */
+    }
 }
